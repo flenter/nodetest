@@ -23,7 +23,7 @@ deploy:
           echo "You will be prompted for your password by sudo."
 
           # add heroku repository to apt
-          echo "deb http://toolbelt.heroku.com/ ubuntu " | sudo tee /etc/apt/sources.list.d/heroku.list
+          echo "deb http://toolbelt.heroku.com/ ubuntu/" | sudo tee /etc/apt/sources.list.d/heroku.list
 
           # install heroku's release key for package verification
           wget -O- https://toolbelt.heroku.com/apt/release.key | sudo apt-key add -
