@@ -20,7 +20,7 @@ deploy:
         name: heroku thingy
         code: |
           ls -la /etc/apt/
-          ls -la /etc/apt/apt.conf.d/
+          cat /etc/apt/apt.conf.d/*
           echo "This script requires superuser access to install apt packages."
           echo "You will be prompted for your password by sudo."
 
