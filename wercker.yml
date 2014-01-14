@@ -15,5 +15,4 @@ build:
           echo "nothing"
 deploy:
   steps:
-    - wercker/heroku-deploy@1.0.4-beta
     - heroku-deploy
