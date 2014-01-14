@@ -20,23 +20,25 @@ deploy:
         name: heroku thingy
         code: |
           ls -la /etc/apt/
-          cat /etc/apt/apt.conf.d/*
-          sudo apt-get clean all
-          echo "This script requires superuser access to install apt packages."
-          echo "You will be prompted for your password by sudo."
-          date
+          # date
+          # cat /etc/apt/apt.conf.d/*
+          # sudo apt-get clean all
+          # echo "This script requires superuser access to install apt packages."
+          # echo "You will be prompted for your password by sudo."
 
           # add heroku repository to apt
-          echo "deb http://toolbelt.heroku.com/ubuntu ./" | sudo tee /etc/apt/sources.list.d/heroku.list
+          # echo "deb http://toolbelt.heroku.com/ubuntu ./" | sudo tee /etc/apt/sources.list.d/heroku.list
 
           # install heroku's release key for package verification
-          wget -O- https://toolbelt.heroku.com/apt/release.key | sudo apt-key add -
+          # wget -O- https://toolbelt.heroku.com/apt/release.key | sudo apt-key add -
 
           # update your sources
-          sudo apt-get update
+          # sudo apt-get update
 
           # install the toolbelt
-          sudo apt-get install -y heroku-toolbelt
+          # sudo apt-get install -y heroku-toolbelt
+          sudo dpkg -i foreman-0.60.0.deb heroku-3.2.0.deb heroku-toolbelt-3.2.0.deb
+
 
     - script:
         name: experiment heroku-deploy
