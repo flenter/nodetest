@@ -3,8 +3,6 @@ error_suffix='Please add this option to the wercker.yml or add a heroku deployme
 exit_code_push=0
 exit_code_run=0
 
-wget http://toolbelt.heroku.com/ubuntu/./Release.gpg
-
 if [ -z "$WERCKER_HEROKU_DEPLOY_KEY"  ]
 then
     if [ ! -z "$HEROKU_KEY" ]
