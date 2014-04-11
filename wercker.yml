@@ -15,7 +15,7 @@ build:
           echo "nothing"
 deploy:
   steps:
-    - heroku-deploy:
+    - heroku-deploy@1.0.14:
         install-toolbelt: true
         run: "ls -la"
     - heroku-deploy:
