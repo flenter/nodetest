@@ -15,4 +15,10 @@ build:
           echo "nothing"
 deploy:
   steps:
-    - wercker/heroku-deploy@1.0.14
+    - wercker/heroku-deploy
+        run: "ls"
+    - script:
+        name: test for toolbelt
+        code: |
+            which heroku
+
