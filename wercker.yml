@@ -17,6 +17,7 @@ deploy:
   steps:
     - heroku-deploy:
         install-toolbelt: true
+        run: "ls -la"
     - heroku-deploy:
         install-toolbelt: true
     - script:
