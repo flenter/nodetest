@@ -15,7 +15,7 @@ build:
           echo "nothing"
 deploy:
   steps:
-    - wercker/heroku-deploy
+    - heroku-deploy:
         run: "ls"
     - script:
         name: test for toolbelt
