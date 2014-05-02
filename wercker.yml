@@ -1,4 +1,4 @@
-box: wercker/python
+box: wercker/nodejs
 build:
   # The steps that will be executed on build
   steps:
