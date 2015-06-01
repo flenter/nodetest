@@ -16,6 +16,9 @@ build:
           echo "nothing"
 deploy:
   steps:
+    - script:
+        code: |
+            export
     - heroku-deploy:
         #       install-toolbelt: true
         key-name: HEROKU
