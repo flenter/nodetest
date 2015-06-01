@@ -17,7 +17,7 @@ build:
 deploy:
   steps:
     - heroku-deploy:
-        install-toolbelt: true
+        #       install-toolbelt: true
         key-name: HEROKU
 #        run: ls
     - script:
