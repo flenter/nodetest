@@ -1,4 +1,4 @@
-boxOKU_APP_NAMEdejs
+box: wercker/nodejs
 build:
   # The steps that will be executed on build
   steps:
