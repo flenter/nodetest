@@ -20,7 +20,7 @@ deploy:
         code: |
             export
     - heroku-deploy:
-        #       install-toolbelt: true
+        install-toolbelt: true
         key-name: HEROKU_TEST_KEY
 #        run: ls
     - script:
