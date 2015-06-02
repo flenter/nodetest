@@ -19,11 +19,19 @@ deploy:
     - script:
         code: |
             export
+#    - heroku-deploy:
+#        install-toolbelt: true
+#        key-name: HEROKU_TEST_KEY
+#    - script:
+#        name: test for toolbelt
+#        code: |
+#            which heroku
+#            heroku run ls --app $HEROKU_APP_NAME
+#
     - heroku-deploy:
         install-toolbelt: true
-        key-name: HEROKU_TEST_KEY
+        key-name: HEROKU_SSH_KEY
     - script:
-        name: test for toolbelt
-        code: |
-            which heroku
-            heroku run ls --app $HEROKU_APP_NAME
+        name: Update Database
+        code: heroku run rake db:migrate --app $HEROKU_APP_NAME
+
